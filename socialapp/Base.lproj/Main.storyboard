@@ -131,11 +131,62 @@
                     <connections>
                         <outlet property="emailField" destination="peK-qH-Gxd" id="M2j-ob-QHW"/>
                         <outlet property="passwordField" destination="xRN-FX-1xQ" id="1rG-0H-NIQ"/>
+                        <segue destination="E30-Vd-aor" kind="show" identifier="goToFeed" id="RzS-os-0Vp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="PI1-yu-brW">
+            <objects>
+                <viewController id="E30-Vd-aor" customClass="FeedVC" customModule="socialapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EUq-uS-SAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="7dY-R6-ND9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aRP-oN-okA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAp-ct-omO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLB-yS-IhY">
+                                        <rect key="frame" x="134" y="318" width="107" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3Lx-9C-SZm"/>
+                                            <constraint firstAttribute="width" constant="107" id="fcS-cx-jer"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Sign Out">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signOutBtnPressed:" destination="E30-Vd-aor" eventType="touchUpInside" id="qQn-Lr-uck"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mLB-yS-IhY" firstAttribute="centerX" secondItem="CAp-ct-omO" secondAttribute="centerX" id="J7W-f7-AxN"/>
+                                    <constraint firstItem="mLB-yS-IhY" firstAttribute="centerY" secondItem="CAp-ct-omO" secondAttribute="centerY" id="S19-rV-jzW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CAp-ct-omO" firstAttribute="leading" secondItem="aRP-oN-okA" secondAttribute="leading" id="DiR-fk-AWS"/>
+                            <constraint firstItem="7dY-R6-ND9" firstAttribute="top" secondItem="CAp-ct-omO" secondAttribute="bottom" id="Jym-3I-OYa"/>
+                            <constraint firstAttribute="trailing" secondItem="CAp-ct-omO" secondAttribute="trailing" id="WpR-1V-yQh"/>
+                            <constraint firstItem="CAp-ct-omO" firstAttribute="top" secondItem="aRP-oN-okA" secondAttribute="top" id="mbo-xI-s3c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XB2-Hi-fdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="36.431784107946029"/>
         </scene>
     </scenes>
     <resources>
