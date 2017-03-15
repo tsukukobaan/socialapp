@@ -13,6 +13,11 @@
 		3475DE601E78DC12007171DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3475DE5F1E78DC12007171DE /* Assets.xcassets */; };
 		3475DE631E78DC12007171DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3475DE611E78DC12007171DE /* LaunchScreen.storyboard */; };
 		3475DE6B1E78DCF2007171DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3475DE6A1E78DCF2007171DE /* GoogleService-Info.plist */; };
+		34FF5A001E78E8CE00ADE81A /* ShadowDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FF59FF1E78E8CE00ADE81A /* ShadowDesign.swift */; };
+		34FF5A021E78E93100ADE81A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FF5A011E78E93100ADE81A /* Constants.swift */; };
+		34FF5A041E78EAF500ADE81A /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FF5A031E78EAF500ADE81A /* RoundBtn.swift */; };
+		34FF5A061E78EC1B00ADE81A /* FieldDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FF5A051E78EC1B00ADE81A /* FieldDesign.swift */; };
+		34FF5A081E78ED6900ADE81A /* SignInButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FF5A071E78ED6900ADE81A /* SignInButtonDesign.swift */; };
 		48D70A7BB6A6638B1777454C /* Pods_socialapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BECFB93A4287707EA323FA /* Pods_socialapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +31,11 @@
 		3475DE621E78DC12007171DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3475DE641E78DC12007171DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3475DE6A1E78DCF2007171DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		34FF59FF1E78E8CE00ADE81A /* ShadowDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowDesign.swift; sourceTree = "<group>"; };
+		34FF5A011E78E93100ADE81A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		34FF5A031E78EAF500ADE81A /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
+		34FF5A051E78EC1B00ADE81A /* FieldDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldDesign.swift; sourceTree = "<group>"; };
+		34FF5A071E78ED6900ADE81A /* SignInButtonDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInButtonDesign.swift; sourceTree = "<group>"; };
 		5F3C9E3AABD67EC2C1ADA254 /* Pods-socialapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialapp/Pods-socialapp.debug.xcconfig"; sourceTree = "<group>"; };
 		85BECFB93A4287707EA323FA /* Pods_socialapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socialapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +82,7 @@
 				3475DE611E78DC12007171DE /* LaunchScreen.storyboard */,
 				3475DE641E78DC12007171DE /* Info.plist */,
 				3475DE6A1E78DCF2007171DE /* GoogleService-Info.plist */,
+				34FF5A011E78E93100ADE81A /* Constants.swift */,
 			);
 			path = socialapp;
 			sourceTree = "<group>";
@@ -86,6 +97,10 @@
 		34FF59FD1E78DF4800ADE81A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34FF59FF1E78E8CE00ADE81A /* ShadowDesign.swift */,
+				34FF5A031E78EAF500ADE81A /* RoundBtn.swift */,
+				34FF5A051E78EC1B00ADE81A /* FieldDesign.swift */,
+				34FF5A071E78ED6900ADE81A /* SignInButtonDesign.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,8 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34FF5A081E78ED6900ADE81A /* SignInButtonDesign.swift in Sources */,
 				3475DE5B1E78DC12007171DE /* SignInVC.swift in Sources */,
+				34FF5A041E78EAF500ADE81A /* RoundBtn.swift in Sources */,
+				34FF5A001E78E8CE00ADE81A /* ShadowDesign.swift in Sources */,
 				3475DE591E78DC12007171DE /* AppDelegate.swift in Sources */,
+				34FF5A061E78EC1B00ADE81A /* FieldDesign.swift in Sources */,
+				34FF5A021E78E93100ADE81A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
