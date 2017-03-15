@@ -222,6 +222,9 @@
                                                         <state key="normal" image="add-post">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="postBtnPressed:" destination="E30-Vd-aor" eventType="touchUpInside" id="yaE-Zy-gRv"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -367,6 +370,7 @@
                     </view>
                     <connections>
                         <outlet property="addImage" destination="azz-xc-MCK" id="LFV-KI-vPd"/>
+                        <outlet property="captionField" destination="Hf8-SD-bbC" id="PYL-3I-NEx"/>
                         <outlet property="tableView" destination="Hrt-Iz-WHE" id="0XN-Fk-BSm"/>
                     </connections>
                 </viewController>

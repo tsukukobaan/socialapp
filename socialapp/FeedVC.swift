@@ -14,10 +14,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: CircleView!
+    @IBOutlet weak var captionField: UITextField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
+            imageSelected = true
         } else {
             print("JESS: valid image wasn't selected")
         }
@@ -102,6 +105,36 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBAction func addImagePressed(_ sender: Any) {
         present(imagePicker,animated: true,completion: nil)
+    }
+    
+    @IBAction func postBtnPressed(_ sender: Any) {
+        guard let caption = captionField.text, caption != "" else {
+            print("JESS: caption must be entered")
+            return
+        }
+        
+        guard let img = addImage.image, imageSelected == true else {
+            print("Jess: image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metaData) {(metadata,error) in
+                if error != nil {
+                    print("JESS: Unable to upload image to firebase")
+                } else {
+                    print("JESS: Successfully uploaded image to firebase")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                }
+                
+            }
+            
+        }
     }
     
     @IBAction func signOutBtnPressed(_ sender: Any) {
