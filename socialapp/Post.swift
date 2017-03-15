@@ -22,7 +22,11 @@ class Post {
         return _imageUrl
     }
     
-    var likes: String {
+    var likes: Int {
+        return _likes
+    }
+    
+    var postKey: String {
         return _postKey
     }
     
