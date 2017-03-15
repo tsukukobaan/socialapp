@@ -86,13 +86,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="25"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="xRN-FX-1xQ" customClass="FieldDesign" customModule="socialapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="300" height="25"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBY-4f-lPQ" customClass="SignInButtonDesign" customModule="socialapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="76" width="300" height="36"/>
@@ -101,6 +101,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NpA-jb-PfZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -125,6 +128,10 @@
                             <constraint firstItem="DtL-7o-bBz" firstAttribute="top" secondItem="M6n-B9-pUV" secondAttribute="bottom" constant="20" id="u4q-LO-rXo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="peK-qH-Gxd" id="M2j-ob-QHW"/>
+                        <outlet property="passwordField" destination="xRN-FX-1xQ" id="1rG-0H-NIQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
